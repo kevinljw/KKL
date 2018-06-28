@@ -1,0 +1,253 @@
+body {
+
+      margin: 0;
+      overflow-x: hidden;
+      overflow-y: hidden;
+    /*  background-image: url(img/kv.png);
+      background-size: 100%;
+      background-repeat: none;*/
+
+    }
+@media only screen and (max-width: 992px){
+    body {
+    	overflow-x:hidden;
+    	overflow-y: hidden;
+    }
+}
+@media (max-width: 479px){
+    body {
+    	overflow-x:hidden;
+    	overflow-y: hidden;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    body {
+        overflow: hidden!important;
+    }
+}
+
+/* ----------- iPad mini ----------- */
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow: hidden!important;
+    }
+}
+
+img{
+	position: absolute;
+}
+
+.kv{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	z-index: 1;
+}
+
+.cloud1{
+	width: 15%;
+	z-index: 2;
+	margin-top: 100px;
+	animation-name: cloud1;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate-reverse;
+}
+@keyframes cloud1 {
+     0%   {left:30px;}
+    100% {left:820px;}
+}
+
+
+.cloud2{
+	width: 15%;
+	z-index: 3;
+	margin-top: 220px;
+	animation-name: cloud2;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+    animation-direction: alternate-reverse;
+
+}
+@keyframes cloud2 {
+    0%   {left:10px;}
+    100% {left:800px;}
+}
+
+
+.cloud3{
+	width: 20%;
+	z-index: 4;
+	margin-top: 30px;
+	animation-name: cloud3;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-direction: alternate-reverse;
+
+}
+@keyframes cloud3 {
+    0%   {left:800px;}
+    100% {left:40px;}
+}
+
+
+.cloud4{
+	width: 15%;
+	z-index: 5;
+	margin-top: 280px;
+	animation-name: cloud4;
+    animation-duration: 17s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate-reverse;
+
+}
+@keyframes cloud4 {
+    0%   {left:850px;}
+    100% {left:60px;}
+}
+
+
+
+.road{
+	width: 58%;
+	z-index: 6;
+	bottom: 0px;
+	left: 50%;
+	transform: translate(-50%, 0);
+
+}
+
+
+.round1{
+	z-index: 5;
+	bottom: 0px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	animation-name: round1;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate-reverse;
+}
+@keyframes round1 {
+    0%   {width: 105%;}
+    100% {width: 75%;}
+}
+
+.round2{
+	z-index: 6;
+	bottom: 0px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	animation-name: round2;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate-reverse;
+}
+@keyframes round2 {
+    0%   {width: 90%;}
+    100% {width: 50%;}
+}
+
+.lantern1{
+	width: 5%;
+	z-index: 5;
+	top: 80px;
+	left: 30px;
+	animation-name: lantern1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate-reverse;
+}
+@keyframes lantern1 {
+    0%   {transform: rotate(-10deg);}
+    100% {transform: rotate(15deg);}
+}
+
+.lantern2{
+	width: 4%;
+	z-index: 5;
+	top: 160px;
+	left: 170px;
+	animation-name: lantern2;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate-reverse;
+}
+@keyframes lantern2 {
+    0%   {transform: rotate(10deg);}
+    100% {transform: rotate(-15deg);}
+}
+
+.lantern3{
+	width: 3%;
+	z-index: 5;
+	top: 270px;
+	left: 340px;
+	animation-name: lantern3;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate-reverse;
+}
+@keyframes lantern3 {
+    0%   {transform: rotate(10deg);}
+    100% {transform: rotate(-15deg);}
+}
+
+.lantern4{
+	width: 5%;
+	z-index: 5;
+	top: 75px;
+	right: 40px;
+	animation-name: lantern4;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate-reverse;
+}
+@keyframes lantern4 {
+    0%   {transform: rotate(-10deg);}
+    100% {transform: rotate(15deg);}
+}
+
+.lantern5{
+	width: 4%;
+	z-index: 5;
+	top: 145px;
+	right: 160px;
+	animation-name: lantern5;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate-reverse;
+}
+@keyframes lantern5 {
+    0%   {transform: rotate(-20deg);}
+    100% {transform: rotate(10deg);}
+}
+
+.lantern6{
+	width: 3%;
+	z-index: 5;
+	top: 285px;
+	right: 370px;
+	animation-name: lantern6;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate-reverse;
+}
+@keyframes lantern6 {
+    0%   {transform: rotate(20deg);}
+    100% {transform: rotate(-10deg);}
+}
