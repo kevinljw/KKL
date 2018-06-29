@@ -117,7 +117,7 @@ img{
 .road{
 	width: 70%;
 	z-index: -5;
-	bottom: 0px;
+	bottom: -50px;
 	left: 50%;
 	transform: translate(-50%, 0);
 
