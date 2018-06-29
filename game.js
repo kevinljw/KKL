@@ -58,9 +58,23 @@ $( document ).ready(function() {
                 width: bottleSize/randVal*1.5,
                 height: bottleSize/randVal*1.5,
             }).each("end", function(){
-                var resRanVal = randomRound(0,awardLst.length-1);
-                console.log("resRanVal",resRanVal);
-                $("#gainText>p").text(awardLst[resRanVal][0]);
+                var resRanVal = randomRound(0,100);
+                var remainVal = resRanVal;
+                var idx = 0;
+                
+                for(var i=0;i<awardLst.length;i++){
+                    if(remainVal<=awardLst[i][1]){
+                        idx = i;
+                        break;
+                    }
+                    else{
+                        remainVal-=awardLst[i][1];
+                    }
+                }
+                
+                
+//                console.log("resRanVal",resRanVal,"idx",idx);
+                $("#gainText>p").text(awardLst[idx][0]);
         $("#gainText").fadeIn();
             $("#restartBtn").fadeIn();
       	
