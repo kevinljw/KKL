@@ -1,15 +1,17 @@
 var awardLst = [["aaa",60],["bbb",40]];
-var initBottlePost = 0.86;
+var initBottlePost = 1;
 $( document ).ready(function() {
     
     scaleSvgSize("#playground");
     $("#gainText").hide();
     $("#restartBtn").hide();
+    
+    
+    window.scrollTo( 0, window.innerHeight );
+    
     $(window).on('resize', function() {
         scaleSvgSize("#playground");
     });
-    
-    window.scrollTo( 0, window.innerHeight );
 //    var roadSize = 500;
 //    d3.select("#playground").append('svg:image')
 //    .attr({
