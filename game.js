@@ -55,7 +55,7 @@ $( document ).ready(function() {
         if (swipedir =='up'){
             console.log("up");
             $("#hintText").fadeOut();
-            var randVal = 2-1.2*globalDistY/window.innerHeight;
+            var randVal = 1-1.6*globalDistY/window.innerHeight;
 //            console.log(randVal,globalDistY/window.innerHeight);
             d3.select("#bottleImg")
                 .transition()
