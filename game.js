@@ -1,5 +1,6 @@
 var awardLst = [["aaa",60],["bbb",40]];
 var initBottlePost = 1;
+var globalDistY = 0;
 document.addEventListener("touchmove", function(event){
     event.preventDefault();
 }, false);
@@ -54,12 +55,12 @@ $( document ).ready(function() {
         if (swipedir =='up'){
             console.log("up");
             $("#hintText").fadeOut();
-            var randVal = random(2,3);
-            console.log(randVal);
+            var randVal = 2-1.2*globalDistY/window.innerHeight;
+//            console.log(randVal,globalDistY/window.innerHeight);
             d3.select("#bottleImg")
                 .transition()
                 .duration(3500)
-//                .ease("quad")
+                .ease("exp-out")
 //                .delay(200)
                 .attr({
                 x: parseInt(window.innerWidth/2)-bottleSize/2/randVal*1.5,
@@ -108,7 +109,7 @@ function swipedetect(el, callback){
     startY,
     distX,
     distY,
-    threshold = 150, //required min distance traveled to be considered swipe
+    threshold = 20, //required min distance traveled to be considered swipe
     restraint = 100, // maximum distance allowed at the same time in perpendicular direction
     allowedTime = 300, // maximum time allowed to travel that distance
     elapsedTime,
@@ -130,10 +131,13 @@ function swipedetect(el, callback){
     }, false)
   
     touchsurface.addEventListener('touchend', function(e){
-        var touchobj = e.changedTouches[0]
-        distX = touchobj.pageX - startX // get horizontal dist traveled by finger while in contact with surface
-        distY = touchobj.pageY - startY // get vertical dist traveled by finger while in contact with surface
-        elapsedTime = new Date().getTime() - startTime // get time elapsed
+        var touchobj = e.changedTouches[0];
+        distX = touchobj.pageX - startX; // get horizontal dist traveled by finger while in contact with surface
+        distY = touchobj.pageY - startY; // get vertical dist traveled by finger while in contact with surface
+        elapsedTime = new Date().getTime() - startTime; // get time elapsed
+        
+        globalDistY = distY;
+        
         if (elapsedTime <= allowedTime){ // first condition for awipe met
             if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint){ // 2nd condition for horizontal swipe met
                 swipedir = (distX < 0)? 'left' : 'right' // if dist traveled is negative, it indicates left swipe
