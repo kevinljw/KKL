@@ -1,11 +1,15 @@
 var awardLst = [["aaa",60],["bbb",40]];
+var initBottlePost = 0.86;
 $( document ).ready(function() {
+    
     scaleSvgSize("#playground");
     $("#gainText").hide();
     $("#restartBtn").hide();
     $(window).on('resize', function() {
         scaleSvgSize("#playground");
     });
+    
+    window.scrollTo( 0, window.innerHeight );
 //    var roadSize = 500;
 //    d3.select("#playground").append('svg:image')
 //    .attr({
@@ -21,7 +25,7 @@ $( document ).ready(function() {
     .attr({
       'xlink:href': 'img/bottle.png',  
       x: parseInt(window.innerWidth/2)-bottleSize/2,
-      y: window.innerHeight-1.1*bottleSize,
+      y: window.innerHeight-initBottlePost*bottleSize,
       width: bottleSize,
       height: bottleSize,
     id: "bottleImg"
@@ -32,7 +36,7 @@ $( document ).ready(function() {
         $("#restartBtn").hide();
         d3.select("#bottleImg").attr({ 
         x: parseInt(window.innerWidth/2)-bottleSize/2,
-          y: window.innerHeight-1.2*bottleSize,
+          y: window.innerHeight-initBottlePost*bottleSize,
           width: bottleSize,
           height: bottleSize
         });
