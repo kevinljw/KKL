@@ -53,20 +53,20 @@ $( document ).ready(function() {
     swipedetect(el, function(swipedir){
 //        swipedir contains either "none", "left", "right", "up", or "down"
         if (swipedir =='up'){
-            console.log("up");
+//            console.log("up");
             $("#hintText").fadeOut();
-            var randVal = 1-1.6*globalDistY/window.innerHeight;
-//            console.log(randVal,globalDistY/window.innerHeight);
+            var randVal = 1.5-2.5*globalDistY/window.innerHeight;
+            console.log(randVal,globalDistY/window.innerHeight);
             d3.select("#bottleImg")
                 .transition()
                 .duration(3500)
                 .ease("exp-out")
 //                .delay(200)
                 .attr({
-                x: parseInt(window.innerWidth/2)-bottleSize/2/randVal*1.5,
-                y: window.innerHeight-randVal*bottleSize/randVal*1.5,
-                width: bottleSize/randVal*1.5,
-                height: bottleSize/randVal*1.5,
+                x: parseInt(window.innerWidth/2)-bottleSize/2/randVal*1.4,
+                y: window.innerHeight-randVal*bottleSize/randVal*1.4,
+                width: bottleSize/randVal*1.4,
+                height: bottleSize/randVal*1.4,
             }).each("end", function(){
                 var resRanVal = randomRound(0,100);
                 var remainVal = resRanVal;
