@@ -1,5 +1,8 @@
 var awardLst = [["aaa",60],["bbb",40]];
 var initBottlePost = 1;
+document.addEventListener("touchmove", function(event){
+    event.preventDefault();
+}, false);
 $( document ).ready(function() {
     
     scaleSvgSize("#playground");
