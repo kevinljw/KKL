@@ -1,4 +1,4 @@
-var awardLst = [["aaa",60],["bbb",40]];
+var awardLst = [["環保吸管組",80],["時尚露營燈",20]];
 var initBottlePost = 1;
 var globalDistY = 0;
 document.addEventListener("touchmove", function(event){
